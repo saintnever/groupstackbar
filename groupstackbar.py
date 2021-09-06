@@ -184,7 +184,7 @@ def plot_grouped_stacks(filename, BGV, fig_size=(10, 8),
         for row in f:
             r = row.strip().split(',')    
             if len(r) != 4:
-                print ('4 items not found @ line ', c, ' of ', filename)
+                print ('4 items not found @ line ', r, ' of ', filename)
                 return
             else:
                 fileread_list.append(r)
@@ -273,7 +273,7 @@ def plot_grouped_stacks(filename, BGV, fig_size=(10, 8),
     for state in sorted_order_for_stacking_H:
         state_num += 1
         week_num = -1
-        for week in ['Week 1', 'Week 2','Week 3']:
+        for week in sorted_order_for_stacking_G:
             week_num += 1
 
             a = [0] * len(sorted_order_for_stacking_V)
